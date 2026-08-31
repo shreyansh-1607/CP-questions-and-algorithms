@@ -5,6 +5,8 @@ vector<int> a(n);
 // read the vector
 vector<int> b = a;
 sort(b.begin(), b.end());
+b.erase(unique(b.begin(), b.end()), b.end());
+
 map<int, int> m;
 for (int i = 0; i < n; i++) {
     m[b[i]] = i;
